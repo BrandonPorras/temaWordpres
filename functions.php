@@ -12,6 +12,22 @@ function bootstrap_css() {
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_css');
 
+// Incluir estilos index
+function index_css() {
+	wp_enqueue_style( 'index_css', 
+  					get_stylesheet_directory_uri() . '/css/index.css'
+  					); 
+}
+add_action( 'wp_enqueue_scripts', 'index_css');
+
+// Incluir js index
+function index_js() {
+	wp_enqueue_script( 'index_js', 
+  					get_stylesheet_directory_uri() . '/js/index.js'
+  					); 
+}
+add_action( 'wp_enqueue_scripts', 'index_js');
+
 // Incluir Bootstrap JS
 function bootstrap_js() {
 	wp_enqueue_script( 'bootstrap_js', 
